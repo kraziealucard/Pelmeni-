@@ -1,4 +1,6 @@
-﻿public class Program()
+﻿using System.Globalization;
+
+public class Program()
 {
     public static int Main()
     {
@@ -37,11 +39,12 @@
     private static double inputDouble(string str)
     {
         double value = -1;
-        bool isDouble = false;
-        while (!isDouble)
+        bool isCorrect = false;
+        while (!isCorrect)
         {
             Console.Write(str);
-            isDouble = double.TryParse(Console.ReadLine(), out value);
+            bool isDouble = double.TryParse(Console.ReadLine(), out value);
+            isCorrect = Double.IsPositive(value) && isDouble;
         }
         return value;
     }
