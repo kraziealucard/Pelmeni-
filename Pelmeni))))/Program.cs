@@ -19,7 +19,7 @@ public class Program()
         double Ptlt = (At * Ptln) / 100;
         double Ptm = inputDouble("Введите производительность тестомесильной машины, т/ч: ");
         int n2 = (int)Math.Ceiling(Ptlt / Ptm);
-        Console.WriteLine("Необходимое количество тестомесильных машин: " + n1);
+        Console.WriteLine("Необходимое количество тестомесильных машин: " + n2);
         Console.ReadLine();
         Console.Clear();
 
